@@ -1,0 +1,71 @@
+/* pages/meirituijan/meirituijan.wxss */
+
+.recommend-header {
+  height: 300rpx;
+  width: 100%;
+  position: relative;
+}
+
+.recommend-header image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.recommend-header-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200rpx;
+  margin-left: -50rpx;
+  margin-top: -30rpx;
+  z-index: 2;
+}
+
+.recommend-header-day {
+  font-size: 40rpx;
+}
+
+/* 播放全部区域 */
+
+.recommend-content {
+  border-radius: 40rpx;
+  position: relative;
+  top: -20rpx;
+  background: #fff;
+  padding: 40rpx 20rpx 0 20rpx;
+}
+
+.recommend-content-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.recommend-content-choice {
+  font-size: 24rpx;
+}
+
+.recommend-content-footer {
+  height: 900rpx;
+}
+
+.recommend-content-footerItem {
+  display: flex;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
+.recommend-content-footerItem image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.recommend-content-footerItemName {
+  flex-grow: 1;
+  margin-left: 20rpx;
+}
+.iconfont{
+  line-height: 80rpx !important;
+}

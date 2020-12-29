@@ -1,0 +1,28 @@
+<!--pages/meirituijan/meirituijan.wxml-->
+<view>
+  <view class="recommend-header">
+    <image src="/static/images/recommendSong/recommendSong.jpg"></image>
+    <view class="recommend-header-text">
+      <text class="recommend-header-day">{{day}} /</text>
+      <text class="recommend-header-month">{{month}}</text>
+    </view>
+  </view>
+
+  <view class="recommend-content">
+    <view class="recommend-content-header">
+      <text>播放全部</text>
+      <text class="recommend-content-choice">多选</text>
+    </view>
+
+    <scroll-view scroll-y class="recommend-content-footer">
+      <view class="recommend-content-footerItem" wx:for="{{commentList}}" wx:key="id" bindtap="toSong" data-songId="{{item.id}}" data-index="{{index}}">
+        <image src="{{item.album.picUrl}}"></image>
+        <view class="recommend-content-footerItemName">
+          <view>{{item.name}}</view>
+          <view>{{item.artists[0].name}}</view>
+        </view>
+        <text class="iconfont icon-gengduo"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

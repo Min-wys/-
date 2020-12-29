@@ -1,0 +1,78 @@
+<!--pages/personal1/personal1.wxml-->
+<view class="outer">
+  <!-- 有背景图片的头部 -->
+  <view class="personalHeader">
+    <image src="/static/images/personal/bgImg2.jpg"></image>
+    <view class="personalHeaderLogin">
+
+      <view class="headerImg">
+        <image class="portrait" src="/static/images/personal/missing-face.png"></image>
+        <text class="personalHeaderName">游客</text>
+      </view>
+
+      <view class="personalHeaderMember">
+        <image src="/static/images/personal/vip-card-bg.png"></image>
+        <view>
+          <view class="personalHeaderMemberInner">
+            <view>
+              <text class="iconfont icon-huiyuan-"></text>
+              <text class="guiguMember">硅谷会员</text>
+            </view>
+            <text class="immediatelyOpened">立即开通</text>
+          </view>
+          <view class="atguiguUnion">atguigu Union</view>
+          <view class="listenToMusic">开通会员听歌 撸代码</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 白色区域 -->
+  <view class="footerOuter" bindtouchstart="handleTouchstart" bindtouchmove="handleTouchmove" bindtouchend="handleTouchend" style="transform:translateY({{moveY}}rpx);transition:{{transitionMove}}" >
+    <image src="/static/images/personal/arc.png"></image>
+    <view class="footer">
+      <view class="msg">
+        <view class="msgItem">
+          <text class="iconfont icon-xiaoxi"></text>
+          <text class="myMsg">我的消息</text>
+        </view>
+        <view class="msgItem">
+          <text class="iconfont icon-myRecommender"></text>
+          <text class="myMsg">我的好友</text>
+        </view>
+        <view class="msgItem">
+          <text class="iconfont icon-gerenzhuye "></text>
+          <text class="myMsg">个人主页</text>
+        </view>
+        <view class="msgItem">
+          <text class="iconfont icon-gexingzhuangban "></text>
+          <text class="myMsg">个性装扮</text>
+        </view>
+      </view>
+
+      <view class="recentPlay">
+        <text class="recent">最近播放</text>
+        <view class="history">暂时没有数据</view>
+      </view>
+
+      <view class="my">
+        <view class="myItem">
+          <text>我的音乐</text>
+          <text>></text>
+        </view>
+        <view class="myItem">
+          <text>我的收藏</text>
+          <text>></text>
+        </view>
+        <view class="myItem">
+          <text>我的电台</text>
+          <text>></text>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+</view>

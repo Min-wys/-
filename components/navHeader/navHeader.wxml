@@ -1,0 +1,8 @@
+<!--components/navHeader.wxml-->
+<view class="header">
+  <text class="header-top">{{headerTitle}}</text>
+  <view class="header-bottom">
+    <text class="recommendText">{{headerDec}}</text>
+    <view class="recommendMany">查看更多</view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="true" indicator-color="white" indicator-active-color="#d43c33" class="swiperItem">
+    <swiper-item wx:for="{{bannerList}}" wx:key="id">
+      <image src="{{item.pic}}">
+      </image>
+    </swiper-item>
+  </swiper>
+  <!-- 每日推荐 -->
+  <view class="nav">
+    <view bindtap="meirituijian">
+      <text class="iconfont icon-meirituijian-"></text>
+      <text>每日推荐</text>
+    </view>
+    <view>
+      <text class="iconfont icon-gedan1"></text>
+      <text>歌单</text>
+    </view>
+    <view>
+      <text class="iconfont icon-icon-ranking"></text>
+      <text>排行榜</text>
+    </view>
+    <view>
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view>
+      <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text>直播</text>
+    </view>
+  </view>
+
+  <!-- 精心推荐 -->
+  <view class="recommend">
+
+    <navHeader headerTitle="推荐歌曲" headerDec="为你精心推荐" />
+    <scroll-view class="recommendScoll" enable-flex scroll-x>
+      <view wx:for="{{recommendList}}" wx:key="id">
+        <image src="{{item.picUrl}}"></image>
+        <view class="scollText">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 排行榜 -->
+  <view class="rankingList">
+    <navHeader headerTitle="排行榜" headerDec="热歌风向标" />
+
+    <swiper class="rankingSwiper" next-margin="50rpx">
+      <swiper-item wx:for="{{rankingList}}" wx:key="id">
+        <view class="bgc">
+          <text class="swiperText">{{item.name}}></text>
+          <view class="rankingItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="childItem" wx:for-index="childIndex">
+            <image src="{{childItem.al.picUrl}}"></image>
+            <text class="rankingNum">{{childIndex+1}}</text>
+            <text class="rankingText">{{childItem.al.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+
+
+
+
+</view>
